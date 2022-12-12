@@ -12,3 +12,10 @@ label{
     margin-bottom: 15px;
     text-align: left;
 }
+.btn {
+    display: table-cell;
+    max-width: 600px;
+}
+.btn{
+    margin: 8px 8px 8px 0;
+}
