@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>TypeScript Assessment</h1>
+    <label id="example-radio-group-label">1. What are the three main 'simple types' in TypeScript?</label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="question1">
+        <mat-radio-button class="example-radio-button" *ngFor="let type of types" [value]="type">
+            {{type}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <div>Your answer is: {{question1}}</div><br>
+
+    <label id="example-radio-group-label">2. What is the inherited type for the variable example in `const example =
+        ['Dylan']`?</label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="question2">
+        <mat-radio-button class="example-radio-button" *ngFor="let inherit of inherits" [value]="inherit">
+            {{inherit}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <div>Your answer is: {{question2}}</div><br>
+
+    <label id="example-radio-group-label">3. _____ is a return type for when nothing is returned.</label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="question3">
+        <mat-radio-button class="example-radio-button" *ngFor="let return of returns" [value]="return">
+            {{return}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <div>Your answer is: {{question3}}</div><br>
+
+    <label id="example-radio-group-label">4. Access modifiers control the ______ of properties and methods.</label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="question4">
+        <mat-radio-button class="example-radio-button" *ngFor="let acc of accmodis" [value]="acc">
+            {{acc}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <div>Your answer is: {{question4}}</div><br>
+
+    <label id="example-radio-group-label">5. When a class extends another class and replaces the members of its parent
+        it is called what?</label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="question5">
+        <mat-radio-button class="example-radio-button" *ngFor="let member of members" [value]="member">
+            {{member}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <div>Your answer is: {{question5}}</div>
+    <pre></pre>
+    <button mat-raised-button color="primary" class="btn" type="submit">Finish</button>
+</div>

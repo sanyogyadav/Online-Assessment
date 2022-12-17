@@ -7,15 +7,18 @@ import { AppComponent } from './app.component';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {MatRadioModule} from '@angular/material/radio';
 import { OnlineTestComponent } from './online-test/online-test.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FinishComponent } from './finish/finish.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponentComponent,
     OnlineTestComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FinishComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +26,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
