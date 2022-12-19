@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-online-test',
@@ -7,23 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OnlineTestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  question1!: string;
-  types: string[] = ['Boolean, Number, String ', 'Object, String, Number', 'Array, Object, Boolean', 'Object, Array, Symbol'];
+  selectedValue: any;
+  exampleFirst : string[] = ['Streams data in asynchronously','Streams data in synchronously','Both','None of above'];
 
-  question2!: string;
-  inherits: string[] = ['string[]','any[]','string','unknown[]'];
+  submit(online : any){
 
-  question3!: string;
-  returns: string[] = ['unknown','any[]','any','void'];
-
-  question4!: string;
-  accmodis: string[] = ['string[]','any[]','string','unknown[]'];
-
-  question5!: string;
-  members: string[] = ['Overload','Extending','Override','inheriting'];
+    console.log("Form Submitted",online)
+    this.router.navigateByUrl('finish');
+  }
 }

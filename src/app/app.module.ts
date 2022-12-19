@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormComponentComponent } from './form-component/form-component.component';
@@ -26,7 +27,8 @@ import { FinishComponent } from './finish/finish.component';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatRadioModule
+    MatRadioModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@
     <form #login="ngForm" (ngSubmit)="submit(login)">
         <div class="form-group">
             <label for="firstname">FirstName</label><br>
-            <input required minlength="2" maxlength="12" type="text" name="firstname" class="form-control" #fname="ngModel" ngModel>
+            <input required minlength="2" maxlength="12" type="text" class="form-control" name="firstname" #fname="ngModel" ngModel>
             <div *ngIf = "fname.touched && fname.invalid" class="alert alert-danger">
                 <p *ngIf="fname.errors?.['required']">FirstName Required!!</p>
                 <p *ngIf="fname.errors?.['minlength']">Sorry! Short Username</p>
