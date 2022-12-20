@@ -1,2 +1,21 @@
-<h1>Page Not Found</h1>
-<p>We can't seem to find the page you are looking for.</p>
+<div class="parent" fxLayout="column" fxLayoutAlign="space-around center">
+    <div class="child" fxLayout="column" fxLayoutAlign="space-around center">
+        <div id="main-message">
+            <h1>
+                <span>This site can't be reached</span>
+            </h1>
+            <p>The connection was reset.</p>
+        </div>
+        <div id="error-information-message">
+            <p>Try:</p>
+            <ul>
+                <li>Checking the connection</li>
+                <li><a href="#">Checking the proxy and the firewall</a></li>
+                <li><a href="#">Running Windows Network Diagnostics</a></li>
+            </ul>
+            <div id="error-code">
+                ERR_CONNECTION_RESET
+            </div>
+        </div>
+    </div>
+</div>

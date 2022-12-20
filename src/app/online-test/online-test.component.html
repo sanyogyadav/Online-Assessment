@@ -1,6 +1,6 @@
 <div class="parent" fxLayout="row" fxLayoutAlign="space-around center">
     <form #online="ngForm" (ngSubmit)="submit(online)">
-        <h1>TypeScript Assessment</h1>
+        <h1>Online Assessment</h1>
         <div>
             <h2>Instructions:</h2>
             1) This Online Assessment simulates a real online certification exams. <br>
@@ -13,7 +13,7 @@
         <div class="child" fxLayout="column" fxLayoutAlign="space-around center">
             
             <label id="radio-group-label">1) What is .subscribe?</label>
-            <mat-radio-group class="radio-group" [(ngModel)]="type1" name="question1">
+            <mat-radio-group class="radio-group" [(ngModel)]="type1" required name="question1">
                 <mat-radio-button class="radio-button" *ngFor="let first of exampleFirst"
                     [value]="first">{{first}}</mat-radio-button>
             </mat-radio-group>
@@ -21,7 +21,7 @@
             <pre></pre>
 
             <label id="radio-group-label">2) Which type of JavaScript language is ___</label>
-            <mat-radio-group class="radio-group" [(ngModel)]="type2" name="question2">
+            <mat-radio-group class="radio-group" [(ngModel)]="type2" required name="question2">
                 <mat-radio-button class="radio-button" *ngFor="let second of exampleSecond"
                     [value]="second">{{second}}</mat-radio-button>
             </mat-radio-group>
@@ -29,7 +29,7 @@
             <pre></pre>
 
             <label id="radio-group-label">3) The "function" and " var" are known as: </label>
-            <mat-radio-group class="radio-group" [(ngModel)]="type3" name="question3">
+            <mat-radio-group class="radio-group" [(ngModel)]="type3" required name="question3">
                 <mat-radio-button class="radio-button" *ngFor="let third of exampleThird"
                     [value]="third">{{third}}</mat-radio-button>
             </mat-radio-group>
@@ -37,7 +37,7 @@
             <pre></pre>
 
             <label id="radio-group-label">4) Which of the following variables takes precedence over the others if the names are the same?</label>
-            <mat-radio-group class="radio-group" [(ngModel)]="type4" name="question4">
+            <mat-radio-group class="radio-group" [(ngModel)]="type4" required name="question4">
                 <mat-radio-button class="radio-button" *ngFor="let four of exampleFourth"
                     [value]="four">{{four}}</mat-radio-button>
             </mat-radio-group>
@@ -45,14 +45,14 @@
             <pre></pre>
 
             <label id="radio-group-label">5) Which one of the following is the correct way for calling the JavaScript code?</label>
-            <mat-radio-group class="radio-group" [(ngModel)]="type5" name="question5">
+            <mat-radio-group class="radio-group" [(ngModel)]="type5" required name="question5">
                 <mat-radio-button class="radio-button" *ngFor="let five of exampleFifth"
                     [value]="five">{{five}}</mat-radio-button>
             </mat-radio-group>
             <div>Your Selected Answer is : {{type5}}</div>
             <pre></pre>
 
-            <button mat-raised-button color="primary" class="btn" type="submit">Finish</button>
+            <button mat-raised-button color="primary" class="btn" [disabled]="online.invalid" type="submit">Finish</button>
         </div>
     </form>
 </div>

@@ -5,8 +5,8 @@
 .child{
     height: 50%;
     width: 50%;
-    border: 1px solid rgb(121, 119, 119);
-    border-radius: 6px;
+    border: 2px solid blue;
+    border-radius : 8px;
     margin-top: 200px;
     /* // margin-left: 80px;
     // margin-top: 40px;

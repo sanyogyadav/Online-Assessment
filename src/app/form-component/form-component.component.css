@@ -8,6 +8,7 @@ h1{
     text-align: center;
     align-items: stretch;
     margin: auto;
+    padding: 100px;
 }
 .child{
     text-align: center;
@@ -20,11 +21,11 @@ label{
     font-weight: bold;
 }
 .alert-danger{
-    background-color: #f44336;
+    background-color: #82f436;
     opacity: 0.6;
 }
 .alert{
-    color:white;
+    color: black;
     margin-bottom: 15px;
     text-align: left;
 }
