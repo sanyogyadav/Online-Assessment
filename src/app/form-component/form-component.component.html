@@ -1,36 +1,43 @@
-<div class="container">
-    <h1>Assessment Registration</h1>
+<div class="parent" fxLayout="column" fxLayoutAlign="space-around center">
     <form #login="ngForm" (ngSubmit)="submit(login)">
-        <div class="form-group">
-            <label for="firstname">FirstName</label><br>
-            <input required minlength="2" maxlength="12" type="text" class="form-control" name="firstname" #fname="ngModel" ngModel>
-            <div *ngIf = "fname.touched && fname.invalid" class="alert alert-danger">
-                <p *ngIf="fname.errors?.['required']">FirstName Required!!</p>
-                <p *ngIf="fname.errors?.['minlength']">Sorry! Short Username</p>
+        <div class="child" fxLayout="column" fxLayoutAlign="space-around center">
+            <h1>Assessment Registration</h1>
+            <div class="form-group">
+                <label for="firstname">FirstName</label><br>
+                <input required minlength="2" maxlength="12" type="text" class="form-control" name="firstname"
+                    #fname="ngModel" ngModel>
+                <div *ngIf="fname.touched && fname.invalid" class="alert alert-danger">
+                    <p *ngIf="fname.errors?.['required']">FirstName Required!!</p>
+                    <p *ngIf="fname.errors?.['minlength']">Sorry! Short Username</p>
+                </div>
             </div>
-        </div>
-        <pre></pre>
-        <div class="form-group">
-            <label for="lastname">LastName</label><br>
-            <input required minlength="2" maxlength="12" type="text" name="lastname" class="form-control" #lname="ngModel" ngModel>
-            <div *ngIf = "lname.touched && lname.invalid" class="alert alert-danger">
-                <p *ngIf="lname.errors?.['required']">LastName Required!!</p>
-                <p *ngIf="lname.errors?.['minlength']">Sorry! Short Lastname</p>
+
+            <div class="form-group">
+                <label for="lastname">LastName</label><br>
+                <input required minlength="2" maxlength="12" type="text" name="lastname" class="form-control"
+                    #lname="ngModel" ngModel>
+                <div *ngIf="lname.touched && lname.invalid" class="alert alert-danger">
+                    <p *ngIf="lname.errors?.['required']">LastName Required!!</p>
+                    <p *ngIf="lname.errors?.['minlength']">Sorry! Short Lastname</p>
+                </div>
             </div>
+
+            <div class="form-group">
+                <label for="email">Email</label><br>
+                <input required type="email" name="email" class="form-control" placeholder="abc@xyz.com"
+                    #email="ngModel" ngModel>
+                <div *ngIf="email.touched && email.invalid" class="alert alert-danger">Email Required</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label><br>
+                <input required type="password" minlength="4" name="password" class="form-control" #password="ngModel"
+                    ngModel>
+                <div *ngIf="password.touched && password.invalid" class="alert alert-danger">Password Required</div>
+            </div>
+
+            <button mat-raised-button color="primary" class="btn" [disabled]="login.invalid"
+                type="submit">Submit</button>
         </div>
-        <pre></pre>
-        <div class="form-group">
-            <label for="email">Email</label><br>
-            <input required type="email" name="email" class="form-control" #email="ngModel" ngModel>
-            <div *ngIf = "email.touched && email.invalid" class="alert alert-danger">Email Required</div>
-        </div>
-        <pre></pre>
-        <div class="form-group">
-            <label for="password">Password</label><br>
-            <input required type="password" name="password" class="form-control" #password="ngModel" ngModel>
-            <div *ngIf = "password.touched && password.invalid" class="alert alert-danger">Password Required</div>
-        </div>
-        <pre></pre>
-        <button mat-raised-button color="primary" class="btn" [disabled]="login.invalid" type="submit">Submit</button>
     </form>
 </div>
